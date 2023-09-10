@@ -1,0 +1,28 @@
+.backhover1{
+background-color: #f5f525;
+color: black;
+
+:hover{
+    background-color: #258f8f;
+}
+}
+
+.backhover2{
+    background-color: #258f8f;
+    color: black;
+    :hover{
+        background-color: #f5f525;
+
+    }
+}
+
+.circle{
+    height: 20px; 
+    width: 20px; 
+    position: absolute;
+    background-color: rgb(255, 139, 139); 
+    border-radius: 50%; 
+
+    text-align: left; 
+    border-color: black;
+}
