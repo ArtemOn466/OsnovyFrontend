@@ -1,0 +1,17 @@
+#changeColorText {
+    cursor: pointer;
+}
+
+.changed {
+    background-color: #3498db;
+    color: white;
+}
+
+#changeColorText2{
+    cursor: pointer;
+}
+
+.changed2 {
+    background-color: #44ff64;
+    color: white;
+}

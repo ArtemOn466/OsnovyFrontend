@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прижибиток А.І. ІК-13</title>
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+    ></script>
+    <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+<div class="container">
+    <h2>Прижибиток Артем Ігорович</h2>
+
+    <p> Дата народження: 22.09.2004 Київ</p>
+
+    <p>Освіта: Спеціалізована школа №89, КПІ</p>
+    <p id="changeColorText" >Хобі</p>
+    <ul>
+        <li id="changeColorText2">Football</li>
+        <li>Computer games</li>
+        <li>Reading</li>
+        <li>Watching films</li>
+    </ul>
+    <p>Улюблені книги / фільми</p>
+    <ol>
+        <li>Harry Potter</li>
+        <li>1+1</li>
+        <li>Jane Air</li>
+    </ol>
+    <p>
+        Київ - столиця та найбільше місто України, розташоване на півночі країни в центральній частині. Місто Київ має багатий історичний спадок, що налічує понад 1400 років. Заснований, за легендою, в 5 столітті, Київ був колискою князівства Руського і одним із важливих центрів середньовічної Європи. Спадкоємцем цієї славної історії залишається безліч культурних пам'яток, архітектурних шедеврів і музеїв, які переповнені історією та мистецтвом.
+    </p>
+    <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvisitukraine.today%2Fde%2Fblog%2F1807%2Finteresting-places-in-kyiv-10-places-worth-visiting-in-the-ukrainian-capital&psig=AOvVaw3llw_LJ8ZWWCl0Kh3XAjmt&ust=1694161162614000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIi85qWImIEDFQAAAAAdAAAAABAD"><img src="https://visitukraine.today/media/blog/previews/fAWjVMXYLXywGzneHknrh9tuBRtdH12vJjT5awRu.webp" alt="Kyiv"></a>
+    <input type="file" id="photo-input" accept="image/*">
+    <button id="add-button">Додати</button>
+    <button id="zoom-in-button">Збільшити</button>
+    <button id="zoom-out-button">Зменшити</button>
+    <button id="delete-button">Видалити</button>
+    <div id="photo-container">
+        <img id="photo" src="" alt="Photo">
+    </div>
+</div>
+<script>
+    // Отримуємо текстовий елемент за його ID
+    const textElement = document.getElementById('changeColorText');
+
+    // Додаємо обробник події для натискання на текстовий елемент
+    textElement.addEventListener('click', function() {
+        // Додаємо або видаляємо клас "changed" для зміни фонового кольору
+        textElement.classList.toggle('changed');
+    });
+
+    // Отримуємо текстовий елемент за допомогою querySelector
+    const textElement2 = document.querySelector('#changeColorText2');
+
+    // Додаємо обробник події для натискання на текстовий елемент
+    textElement2.addEventListener('click', function() {
+        // Додаємо або видаляємо клас "changed" для зміни фонового кольору
+        textElement2.classList.toggle('changed2');
+    });
+
+    const photoInput = document.getElementById("photo-input");
+    const addButton = document.getElementById("add-button");
+    const zoomInButton = document.getElementById("zoom-in-button");
+    const zoomOutButton = document.getElementById("zoom-out-button");
+    const deleteButton = document.getElementById("delete-button");
+    const photoContainer = document.getElementById("photo-container");
+    const photo = document.getElementById("photo");
+
+    addButton.addEventListener("click", () => {
+        photoInput.click();
+    });
+
+    photoInput.addEventListener("change", () => {
+        const file = photoInput.files[0];
+        if (file) {
+            const imageUrl = URL.createObjectURL(file);
+            photo.src = imageUrl;
+            photoContainer.style.display = "block";
+        }
+    });
+
+    zoomInButton.addEventListener("click", () => {
+        const currentWidth = photo.width;
+        const currentHeight = photo.height;
+        photo.style.width = currentWidth * 1.2 + "px";
+        photo.style.height = currentHeight * 1.2 + "px";
+    });
+
+    zoomOutButton.addEventListener("click", () => {
+        const currentWidth = photo.width;
+        const currentHeight = photo.height;
+        photo.style.width = currentWidth / 1.2 + "px";
+        photo.style.height = currentHeight / 1.2 + "px";
+    });
+
+    deleteButton.addEventListener("click", () => {
+        photo.src = "";
+        photoContainer.style.display = "none";
+    });
+
+</script>
+</body>
+</html>
