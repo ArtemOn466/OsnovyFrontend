@@ -1,0 +1,23 @@
+.img{
+    height: 100px;
+    background-color: #208f00;
+    flex: 1;
+}
+
+.text{
+    flex: 1;
+    height: 700px;
+    background-color: #65208f;
+}
+
+.img2{
+    height: 700px;
+    background-color: #258f8f;
+    flex: 1;
+}
+
+.text2{
+    height: 100px;
+    background-color: #f5ff67;
+    flex: 1;
+}

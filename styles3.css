@@ -1,0 +1,28 @@
+.img{
+    width: auto;
+    height: 100px;
+    background-color: #208f00;
+    float: initial;
+}
+
+.text{
+    height: 700px;
+    width: 25%;
+    background-color: #65208f;
+    float: left;
+}
+
+.img2{
+    width: 75%;
+    height: 700px;
+    background-color: #258f8f;
+    float: right;
+}
+
+.text2{
+    clear: both;
+    width: auto;
+    height: 150px;
+    background-color: #f5ff67;
+    float: initial;
+}
