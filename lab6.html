@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відображення даних користувачів</title>
+    <style>
+        /* CSS для вирівнювання користувачів у ряд */
+        #user-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #user-list > div {
+            flex: 0 0 20%; /* Ширина кожного блоку 20% */
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="user-info">
+    <h1>Інформація про користувачів</h1>
+    <div id="user-list"></div>
+</div>
+
+<button id="fetch-data-button">Завантажити дані</button>
+
+<script src="script6.js">
+</script>
+</body>
+</html>
